@@ -1,0 +1,127 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "gallery": "Gallery",
+    "testimonials": "Testimonials",
+    "faq": "FAQs",
+    "contact": "Contact",
+    "enquiry": "Enquiry"
+  },
+  "hero": {
+    "heading": "Beautiful Floral Decorations for Every Occasion",
+    "subheading": "From Birth Ceremonies to Weddings and Respectful Floral Tributes",
+    "viewGallery": "View Gallery",
+    "bookNow": "Book Now",
+    "whatsappUs": "WhatsApp Us"
+  },
+  "about": {
+    "heading": "About SAI FLOWERS AND DECORATORS",
+    "content1": "With over 10 years of experience, we specialize in bringing your celebrations to life with premium, fresh floral arrangements.",
+    "content2": "Whether it's a joyous wedding, an intimate naming ceremony, or a respectful floral tribute, our team provides creative and affordable decoration solutions with timely delivery and 100% customer satisfaction.",
+    "stats": {
+      "events": "500+ Events",
+      "experience": "10+ Years",
+      "clients": "1000+ Happy Clients",
+      "support": "24/7 Support"
+    }
+  },
+  "services": {
+    "heading": "Our Services",
+    "learnMore": "Learn More",
+    "items": {
+      "flower": { "name": "Flower Decoration", "description": "Fresh and beautiful floral setups for any event." },
+      "marriage": { "name": "Marriage Decoration", "description": "Complete floral setups for traditional marriages." },
+      "wedding": { "name": "Wedding Decoration", "description": "Luxury floral stage and venue decoration." },
+      "mandap": { "name": "Mandap Decoration", "description": "Ornate Hindu wedding mandaps with floral archways." },
+      "haldi": { "name": "Haldi Decoration", "description": "Vibrant yellow marigold setups for Haldi ceremonies." },
+      "mehendi": { "name": "Mehendi Decoration", "description": "Colorful floral and light decor for Mehendi nights." },
+      "engagement": { "name": "Engagement Decoration", "description": "Elegant stage decoration for ring ceremonies." },
+      "reception": { "name": "Reception Decoration", "description": "Grand floral stages for wedding receptions." },
+      "birthday": { "name": "Birthday Decoration", "description": "Creative balloon and flower setups for birthdays." },
+      "baby_shower": { "name": "Baby Shower Decoration", "description": "Pastel flowers and joyful themes for baby showers." },
+      "anniversary": { "name": "Anniversary Decoration", "description": "Romantic floral arrangements for anniversaries." },
+      "naming": { "name": "Naming Ceremony", "description": "Traditional floral decor for Naamkaran ceremonies." },
+      "housewarming": { "name": "Housewarming Decoration", "description": "Auspicious entrance decor for Griha Pravesh." },
+      "corporate": { "name": "Corporate Events", "description": "Professional floral styling for corporate functions." },
+      "stage": { "name": "Stage Decoration", "description": "Elaborate floral backdrop walls for stages." },
+      "car": { "name": "Car Decoration", "description": "Elegant flower arrangements for wedding cars." },
+      "temple": { "name": "Temple Decoration", "description": "Devotional floral setups for temple events." },
+      "home": { "name": "Home Decoration", "description": "Fresh floral interiors for festive occasions." },
+      "room": { "name": "Room Decoration", "description": "Romantic room setups with rose petals." },
+      "welcome": { "name": "Welcome Decoration", "description": "Inviting floral archways for event entrances." },
+      "bouquet": { "name": "Flower Bouquet", "description": "Premium hand-tied bouquets for gifting." },
+      "balloon": { "name": "Balloon Decoration", "description": "Colorful balloon artistry for parties." },
+      "torans": { "name": "Torans", "description": "Traditional floral door hangings." },
+      "funeral": { "name": "Funeral Decoration", "description": "Respectful white floral tributes and setups." }
+    }
+  },
+  "gallery": {
+    "heading": "Our Gallery",
+    "all": "All"
+  },
+  "testimonials": {
+    "heading": "What Our Clients Say"
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "q1": "Do you decorate weddings?",
+    "a1": "Yes, weddings are our specialty. We provide complete floral solutions including mandap, stage, and car decoration.",
+    "q2": "Do you travel outside the city?",
+    "a2": "Yes, we travel across Maharashtra for events depending on the scale of the decoration.",
+    "q3": "Can I customize the decoration?",
+    "a3": "Absolutely, we work closely with your vision to create a customized setup that matches your theme and budget.",
+    "q4": "How early should I book?",
+    "a4": "We recommend booking 1-2 months in advance, especially during the peak wedding season.",
+    "q5": "Do you provide fresh flowers?",
+    "a5": "Yes, we source only the freshest flowers daily from premium local and international markets.",
+    "q6": "What is your pricing?",
+    "a6": "Prices vary by event type and scale. Contact us for a custom quote based on your specific needs.",
+    "q7": "Do you offer packages?",
+    "a7": "Yes, we have various packages for different budgets, from intimate home events to grand hotel weddings.",
+    "q8": "How do I book?",
+    "a8": "WhatsApp us or fill the enquiry form and we'll respond within 2 hours with a consultation plan."
+  },
+  "enquiry": {
+    "heading": "Book an Event",
+    "name": "Full Name",
+    "phone": "Mobile Number",
+    "email": "Email Address",
+    "eventType": "Event Type",
+    "date": "Event Date",
+    "location": "Location",
+    "budget": "Estimated Budget",
+    "message": "Additional Details",
+    "submit": "Send via WhatsApp",
+    "selectEvent": "Select Event Type",
+    "selectBudget": "Select Budget"
+  },
+  "contact": {
+    "heading": "Contact Us",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "hours": "Business Hours"
+  },
+  "footer": {
+    "about": "Premium flower and event decoration services in Maharashtra. Bringing beauty and elegance to every occasion.",
+    "quickLinks": "Quick Links",
+    "services": "Top Services",
+    "contact": "Contact Info",
+    "copyright": "Copyright 2025 SAI FLOWERS AND DECORATORS | Privacy Policy"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "gallery": "Gallery Management",
+    "testimonials": "Testimonials",
+    "faqs": "FAQs",
+    "settings": "Settings",
+    "logout": "Logout",
+    "login": "Admin Login",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign In",
+    "backToSite": "Back to website"
+  }
+}

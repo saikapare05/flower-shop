@@ -1,44 +1,64 @@
-# [Project name]
+# SAI FLOWERS AND DECORATORS
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Premium bilingual (English + Marathi) flower decoration business website for SAI FLOWERS AND DECORATORS, Pune, India.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
+- `pnpm --filter @workspace/sai-flowers run dev` — run the website (main artifact)
 - `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
+- Required secrets: `VITE_FIREBASE_API_KEY`, `VITE_FIREBASE_AUTH_DOMAIN`, `VITE_FIREBASE_PROJECT_ID`, `VITE_FIREBASE_STORAGE_BUCKET`, `VITE_FIREBASE_MESSAGING_SENDER_ID`, `VITE_FIREBASE_APP_ID`
 
 ## Stack
 
+- React 19 + Vite + TypeScript + Tailwind CSS
+- Framer Motion for animations
+- Firebase (Auth, Firestore, Storage) for gallery, content, admin
+- Wouter for client-side routing
+- react-hook-form for enquiry form
 - pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- Express 5 API server (not used by main site — Firebase handles data directly)
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/sai-flowers/src/` — main website
+  - `lib/firebase.ts` — Firebase init
+  - `lib/i18n.tsx` — bilingual context + useLanguage hook
+  - `translations/en.json` / `translations/mr.json` — all UI strings
+  - `components/` — Navbar, Hero, About, Services, Gallery, Testimonials, FAQ, Enquiry, Contact, Footer, FloatingButtons, LoadingScreen, CustomCursor, ScrollProgress, SEOHead
+  - `pages/Home.tsx` — main page assembling all sections
+  - `pages/Admin.tsx` — Firebase-protected admin dashboard
+  - `pages/AdminLogin.tsx` — Firebase auth login
+- `attached_assets/generated_images/` — AI-generated images (hero, about, service cards)
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Firebase-direct: All data (gallery, testimonials, FAQs, settings) stored in Firestore/Storage, no Express backend needed
+- Enquiry form opens WhatsApp (wa.me/919960629513) with pre-filled message, no server-side form handling
+- Gallery images right-click/download disabled; Firebase Storage as source of truth
+- Admin at /admin route (Firebase Auth protected); /admin/login for login page
+- All UI text goes through t() translation function; language toggle stored in localStorage
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Premium bilingual (EN/MR) flower decoration business website:
+- Home page with animated hero, about, 24 services, gallery, testimonials, FAQ, enquiry form, contact
+- WhatsApp enquiry: form data auto-formats into WA message
+- Firebase-powered gallery with category filters, lightbox, lazy loading
+- Admin dashboard (login required): upload/delete gallery photos, manage testimonials, FAQs, settings
+- Floating WhatsApp + Call buttons, scroll progress bar, custom cursor, loading screen
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Business name: SAI FLOWERS AND DECORATORS
+- WhatsApp: +91 9960629513 / wa.me/919960629513
+- Colors: Primary Green #1E5631, Gold #D4AF37
+- Bilingual: English + Marathi
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- Google Fonts @import must be the FIRST line in index.css (before Tailwind imports)
+- Firebase env vars must be prefixed VITE_ for Vite to expose them to the browser
+- Gallery fallback to mock Unsplash images when Firestore is empty
 
 ## Pointers
 

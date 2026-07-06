@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "SAI FLOWERS AND DECORATORS"
+version = "1.0.0"
+id = "artifacts/sai-flowers"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19104
+
+[services.development]
+run = "pnpm --filter @workspace/sai-flowers run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/sai-flowers", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/sai-flowers/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19104"
+BASE_PATH = "/"
