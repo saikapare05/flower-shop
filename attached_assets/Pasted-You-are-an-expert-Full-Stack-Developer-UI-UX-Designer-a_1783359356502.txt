@@ -1,0 +1,812 @@
+You are an expert Full Stack Developer, UI/UX Designer, and SEO Specialist.
+
+Build a modern, premium, fully responsive, bilingual (English + Marathi) business website for a flower decoration business.
+
+The website must be production-ready with clean code, reusable components, modern UI, smooth animations, excellent performance, SEO optimization, accessibility, and an easy-to-use admin panel.
+
+====================================================
+BUSINESS DETAILS
+====================================================
+
+Business Name:
+SAI FLOWERS AND DECORATORS
+
+Tagline:
+Beautiful Floral Decorations for Every Occasion
+
+Business Description:
+SAI FLOWERS AND DECORATORS specializes in premium flower and event decorations for every occasion—from birth ceremonies to wedding celebrations and respectful funeral floral arrangements. We provide elegant floral decorations, mandaps, stage decorations, temple decorations, balloon decorations, bouquets, and complete event decoration services.
+
+WhatsApp Number:
++91 9960629513
+
+Country:
+India
+
+Currency:
+INR
+
+====================================================
+TECH STACK
+====================================================
+
+Use:
+
+• React 19
+• TypeScript
+• Vite
+• Tailwind CSS
+• Framer Motion
+• React Router
+• Firebase Authentication
+• Firebase Firestore
+• Firebase Storage
+• React Hook Form
+• React Icons
+• PhotoSwipe or Lightbox
+• Lucide Icons
+
+Project must be modular and scalable.
+
+====================================================
+DESIGN STYLE
+====================================================
+
+Premium
+
+Elegant
+
+Luxury
+
+Minimal
+
+Modern
+
+Professional
+
+Image-focused
+
+Glassmorphism
+
+Soft shadows
+
+Rounded corners
+
+Excellent spacing
+
+====================================================
+COLOR PALETTE
+====================================================
+
+Primary Green
+#1E5631
+
+Gold
+#D4AF37
+
+White
+#FFFFFF
+
+Background
+#F8F9FA
+
+Text
+#333333
+
+Light Grey
+#F2F2F2
+
+====================================================
+TYPOGRAPHY
+====================================================
+
+English
+
+Poppins
+
+Marathi
+
+Noto Sans Devanagari
+
+====================================================
+LANGUAGE SUPPORT
+====================================================
+
+Entire website should be bilingual.
+
+Languages
+
+English
+
+Marathi
+
+Add a language switch button in navbar.
+
+One click instantly changes every text without refreshing.
+
+Store translations inside JSON files.
+
+====================================================
+NAVIGATION
+====================================================
+
+Sticky navbar
+
+Transparent on hero
+
+Solid on scroll
+
+Logo
+
+Business Name
+
+Navigation
+
+Home
+
+About
+
+Services
+
+Gallery
+
+Testimonials
+
+FAQs
+
+Contact
+
+Enquiry
+
+Language Toggle
+
+WhatsApp Button
+
+Mobile Hamburger Menu
+
+Smooth scrolling
+
+====================================================
+HOME PAGE
+====================================================
+
+Large hero banner
+
+Beautiful flower decoration image
+
+Dark overlay
+
+Business Name
+
+Heading
+
+Beautiful Floral Decorations for Every Occasion
+
+Subheading
+
+From Birth Ceremonies to Weddings and Respectful Floral Tributes
+
+Buttons
+
+View Gallery
+
+Book Now
+
+WhatsApp
+
+Animated background
+
+Scroll indicator
+
+====================================================
+ABOUT SECTION
+====================================================
+
+Professional business introduction.
+
+Mention:
+
+Experience
+
+Fresh flowers
+
+Creative decoration
+
+Affordable pricing
+
+Timely delivery
+
+Customer satisfaction
+
+Cover all occasions.
+
+Include beautiful image.
+
+====================================================
+SERVICES
+====================================================
+
+Create beautiful cards.
+
+Each card should contain
+
+Image
+
+Icon
+
+Title
+
+Description
+
+Hover animation
+
+Learn More button
+
+Service Categories
+
+Flower Decoration
+
+Marriage Decoration
+
+Wedding Decoration
+
+Mandap Decoration
+
+Haldi Decoration
+
+Mehendi Decoration
+
+Engagement Decoration
+
+Reception Decoration
+
+Birthday Decoration
+
+Baby Shower Decoration
+
+Anniversary Decoration
+
+Naming Ceremony
+
+Housewarming Decoration
+
+Corporate Events
+
+Stage Decoration
+
+Car Decoration
+
+Temple Decoration
+
+Home Decoration
+
+Room Decoration
+
+Welcome Decoration
+
+Flower Bouquet
+
+Balloon Decoration
+
+Torans
+
+Funeral Flower Decoration
+
+====================================================
+GALLERY
+====================================================
+
+This is the most important section.
+
+Create category filter buttons.
+
+Each category opens only its own gallery.
+
+Categories:
+
+Flower Decoration
+
+Marriage Decoration
+
+Wedding Decoration
+
+Mandap Decoration
+
+Haldi Decoration
+
+Mehendi Decoration
+
+Engagement Decoration
+
+Reception Decoration
+
+Birthday Decoration
+
+Baby Shower Decoration
+
+Anniversary Decoration
+
+Naming Ceremony
+
+Housewarming Decoration
+
+Corporate Events
+
+Stage Decoration
+
+Car Decoration
+
+Temple Decoration
+
+Home Decoration
+
+Room Decoration
+
+Welcome Decoration
+
+Flower Bouquet
+
+Balloon Decoration
+
+Torans
+
+Funeral Flower Decoration
+
+Gallery Features
+
+Responsive Masonry Grid
+
+Lazy Loading
+
+Image Compression
+
+Infinite Scroll
+
+Lightbox
+
+Zoom
+
+Previous
+
+Next
+
+Slideshow
+
+Keyboard Navigation
+
+Touch Swipe
+
+Firebase Storage integration
+
+Unlimited uploads
+
+====================================================
+TESTIMONIALS
+====================================================
+
+Beautiful customer review cards
+
+Star ratings
+
+Customer photos
+
+Auto slider
+
+Manual controls
+
+====================================================
+FAQ
+====================================================
+
+Include FAQ section.
+
+Examples
+
+Do you decorate weddings?
+
+Do you travel outside city?
+
+Can I customize decoration?
+
+How early should I book?
+
+Do you provide flowers?
+
+====================================================
+ENQUIRY FORM
+====================================================
+
+Professional form.
+
+Fields
+
+Full Name
+
+Mobile Number
+
+Email
+
+Event Type
+
+Event Date
+
+Location
+
+Budget
+
+Message
+
+On clicking Submit
+
+DO NOT save the form.
+
+Instead automatically open WhatsApp.
+
+WhatsApp Number
+
+919960629513
+
+Generate message:
+
+Hello SAI FLOWERS AND DECORATORS,
+
+Name:
+
+Phone:
+
+Email:
+
+Event Type:
+
+Date:
+
+Location:
+
+Budget:
+
+Message:
+
+I would like to enquire about your decoration services.
+
+Use
+
+https://wa.me/919960629513
+
+====================================================
+CONTACT
+====================================================
+
+Phone
+
+WhatsApp
+
+Google Maps Embed
+
+Business Hours
+
+Email Placeholder
+
+Instagram
+
+Facebook
+
+====================================================
+FOOTER
+====================================================
+
+Logo
+
+About
+
+Quick Links
+
+Services
+
+Gallery
+
+Contact
+
+Copyright
+
+Privacy Policy
+
+====================================================
+FLOATING BUTTONS
+====================================================
+
+WhatsApp
+
+Call Now
+
+Back to Top
+
+====================================================
+ADMIN PANEL
+====================================================
+
+Create secure admin dashboard.
+
+Firebase Authentication
+
+Admin Login
+
+Dashboard Features
+
+Upload Photos
+
+Delete Photos
+
+Edit Categories
+
+Create New Categories
+
+Edit Hero Banner
+
+Update Services
+
+Update About Section
+
+Manage Testimonials
+
+Manage Contact Details
+
+Manage FAQs
+
+Manage Gallery
+
+Everything updates instantly.
+
+====================================================
+IMAGE STORAGE
+====================================================
+
+Store gallery in Firebase Storage.
+
+Folder Structure
+
+Flower Decoration
+
+Marriage Decoration
+
+Wedding Decoration
+
+Mandap Decoration
+
+Haldi Decoration
+
+Mehendi Decoration
+
+Engagement Decoration
+
+Reception Decoration
+
+Birthday Decoration
+
+Baby Shower Decoration
+
+Anniversary Decoration
+
+Naming Ceremony
+
+Housewarming Decoration
+
+Corporate Events
+
+Stage Decoration
+
+Car Decoration
+
+Temple Decoration
+
+Home Decoration
+
+Room Decoration
+
+Welcome Decoration
+
+Flower Bouquet
+
+Balloon Decoration
+
+Torans
+
+Funeral Flower Decoration
+
+Images automatically appear inside respective categories.
+
+====================================================
+SEO
+====================================================
+
+Optimize entire website.
+
+Include
+
+Meta Title
+
+Meta Description
+
+Keywords
+
+Open Graph
+
+Twitter Cards
+
+Schema.org Local Business
+
+Sitemap
+
+Robots.txt
+
+Canonical URLs
+
+Structured Data
+
+====================================================
+PERFORMANCE
+====================================================
+
+Lighthouse Score
+
+95+
+
+Fast Loading
+
+Lazy Images
+
+Code Splitting
+
+Caching
+
+Optimized Assets
+
+====================================================
+ACCESSIBILITY
+====================================================
+
+WCAG Friendly
+
+Keyboard Navigation
+
+ARIA Labels
+
+High Contrast
+
+Alt Text
+
+====================================================
+ANIMATIONS
+====================================================
+
+Framer Motion
+
+Fade
+
+Slide
+
+Scale
+
+Hover
+
+Page Transition
+
+Stagger Animation
+
+====================================================
+RESPONSIVE
+====================================================
+
+Desktop
+
+Laptop
+
+Tablet
+
+Mobile
+
+====================================================
+EXTRA FEATURES
+====================================================
+
+Dark Mode
+
+Loading Screen
+
+Skeleton Loader
+
+404 Page
+
+Custom Cursor (Desktop)
+
+Image Placeholder
+
+Search Gallery
+
+Filter Gallery
+
+Download Disabled
+
+Right Click Disabled on Gallery Images
+
+Image Watermark Option
+
+Google Analytics Ready
+
+Google Search Console Ready
+
+Google Maps Integration
+
+Click-to-Call
+
+WhatsApp Floating Button
+
+Sticky CTA
+
+Scroll Progress Bar
+
+====================================================
+CONTENT MANAGEMENT
+====================================================
+
+The admin should be able to:
+
+Upload photos from mobile or desktop.
+
+Delete photos.
+
+Change banners.
+
+Edit text.
+
+Add testimonials.
+
+Edit services.
+
+Change phone number.
+
+Change WhatsApp number.
+
+Change business hours.
+
+No coding should be required after deployment.
+
+====================================================
+CODE QUALITY
+====================================================
+
+Use reusable React components.
+
+Organize folders properly.
+
+Use TypeScript everywhere.
+
+Follow best practices.
+
+Use environment variables for Firebase.
+
+No repeated code.
+
+Well documented.
+
+Production ready.
+
+====================================================
+FINAL REQUIREMENTS
+====================================================
+
+Generate the COMPLETE project with:
+
+✔ Folder structure
+✔ All React components
+✔ Firebase configuration
+✔ Tailwind configuration
+✔ Admin dashboard
+✔ Responsive UI
+✔ Gallery
+✔ WhatsApp enquiry
+✔ English and Marathi translations
+✔ SEO setup
+✔ Deployment instructions
+✔ README.md
+
+The final result should look like a premium event decoration company website comparable to the best professional event decorators in India, with a luxurious feel, excellent performance, and a simple admin interface for managing content.
