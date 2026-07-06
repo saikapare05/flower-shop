@@ -24,7 +24,18 @@ export default function AdminLogin() {
       toast.success("Login successful");
       setLocation('/admin');
     } catch (error: any) {
-      toast.error(error.message || "Failed to login");
+      console.error('Login error:', error.code, error.message);
+      const messages: Record<string, string> = {
+        'auth/invalid-credential': 'Wrong email or password.',
+        'auth/user-not-found': 'No account found with this email.',
+        'auth/wrong-password': 'Incorrect password.',
+        'auth/invalid-email': 'Invalid email address.',
+        'auth/too-many-requests': 'Too many attempts. Try again later.',
+        'auth/network-request-failed': 'Network error. Check your connection.',
+        'auth/operation-not-allowed': 'Email/Password sign-in is not enabled in Firebase Console. Go to Authentication → Sign-in method → Email/Password and enable it.',
+        'auth/unauthorized-domain': `This domain is not authorised in Firebase. Go to Authentication → Settings → Authorised domains and add: ${window.location.hostname}`,
+      };
+      toast.error(messages[error.code] || `Error: ${error.code || error.message}`);
     } finally {
       setLoading(false);
     }
