@@ -30,31 +30,179 @@
   "services": {
     "heading": "Our Services",
     "learnMore": "Learn More",
+    "whatsappEnquiry": "WhatsApp Enquiry",
+    "includes": "What's Included",
+    "idealFor": "Ideal For",
+    "close": "Close",
     "items": {
-      "flower": { "name": "Flower Decoration", "description": "Fresh and beautiful floral setups for any event." },
-      "marriage": { "name": "Marriage Decoration", "description": "Complete floral setups for traditional marriages." },
-      "wedding": { "name": "Wedding Decoration", "description": "Luxury floral stage and venue decoration." },
-      "mandap": { "name": "Mandap Decoration", "description": "Ornate Hindu wedding mandaps with floral archways." },
-      "haldi": { "name": "Haldi Decoration", "description": "Vibrant yellow marigold setups for Haldi ceremonies." },
-      "mehendi": { "name": "Mehendi Decoration", "description": "Colorful floral and light decor for Mehendi nights." },
-      "engagement": { "name": "Engagement Decoration", "description": "Elegant stage decoration for ring ceremonies." },
-      "reception": { "name": "Reception Decoration", "description": "Grand floral stages for wedding receptions." },
-      "birthday": { "name": "Birthday Decoration", "description": "Creative balloon and flower setups for birthdays." },
-      "baby_shower": { "name": "Baby Shower Decoration", "description": "Pastel flowers and joyful themes for baby showers." },
-      "anniversary": { "name": "Anniversary Decoration", "description": "Romantic floral arrangements for anniversaries." },
-      "naming": { "name": "Naming Ceremony", "description": "Traditional floral decor for Naamkaran ceremonies." },
-      "housewarming": { "name": "Housewarming Decoration", "description": "Auspicious entrance decor for Griha Pravesh." },
-      "corporate": { "name": "Corporate Events", "description": "Professional floral styling for corporate functions." },
-      "stage": { "name": "Stage Decoration", "description": "Elaborate floral backdrop walls for stages." },
-      "car": { "name": "Car Decoration", "description": "Elegant flower arrangements for wedding cars." },
-      "temple": { "name": "Temple Decoration", "description": "Devotional floral setups for temple events." },
-      "home": { "name": "Home Decoration", "description": "Fresh floral interiors for festive occasions." },
-      "room": { "name": "Room Decoration", "description": "Romantic room setups with rose petals." },
-      "welcome": { "name": "Welcome Decoration", "description": "Inviting floral archways for event entrances." },
-      "bouquet": { "name": "Flower Bouquet", "description": "Premium hand-tied bouquets for gifting." },
-      "balloon": { "name": "Balloon Decoration", "description": "Colorful balloon artistry for parties." },
-      "torans": { "name": "Torans", "description": "Traditional floral door hangings." },
-      "funeral": { "name": "Funeral Decoration", "description": "Respectful white floral tributes and setups." }
+      "flower": {
+        "name": "Flower Decoration",
+        "description": "Fresh and beautiful floral setups for any event.",
+        "details": "We create stunning floral installations using the freshest blooms sourced daily. Every arrangement is custom-designed to match your event's theme, colour palette, and ambiance. From table centrepieces to full-venue transformations, our floral artistry makes your event unforgettable.",
+        "includes": ["Custom centrepieces and table arrangements", "Entrance gate and archway florals", "Stage backdrop flower panels", "Flower garlands and hangings", "Day-of setup and breakdown", "Fresh flowers sourced daily"],
+        "idealFor": "Weddings, receptions, corporate events, festive celebrations"
+      },
+      "marriage": {
+        "name": "Marriage Decoration",
+        "description": "Complete floral setups for traditional marriages.",
+        "details": "Our traditional marriage decoration service covers every ritual space — from the welcome gate to the mandap, dining area, and stage. We blend traditional Indian floral styles with modern aesthetics to honour your cultural customs beautifully.",
+        "includes": ["Mandap floral setup", "Welcome gate decoration", "Stage and seating area florals", "Flower torans and rangoli accents", "Phoolon ki chaadar", "Full venue dressing"],
+        "idealFor": "Hindu, Marathi, and multi-cultural traditional marriages"
+      },
+      "wedding": {
+        "name": "Wedding Decoration",
+        "description": "Luxury floral stage and venue decoration.",
+        "details": "Our premium wedding decoration service transforms any venue into a floral paradise. We handle everything — from the bridal entry path to the grand reception stage, floral ceiling canopies, and guest table settings — with impeccable attention to detail.",
+        "includes": ["Grand stage floral backdrop", "Bridal entry pathway with petals", "Floral ceiling canopy or chandelier", "Guest table centrepieces", "Photo backdrop and selfie zones", "Bride and groom seating florals"],
+        "idealFor": "Banquet halls, lawns, hotel weddings, destination weddings"
+      },
+      "mandap": {
+        "name": "Mandap Decoration",
+        "description": "Ornate Hindu wedding mandaps with floral archways.",
+        "details": "The mandap is the sacred heart of every Hindu wedding. We craft each mandap with devotion — using marigolds, roses, mogra, orchids, and seasonal blooms to create a divine canopy that frames your most important vows. Structures are fully custom and can be traditional or contemporary.",
+        "includes": ["4-pillar or 6-pillar mandap structure", "Floral canopy (ceiling) with hanging flowers", "Pillar wrapping with garlands", "Floral archway at mandap entry", "Sacred fire area (havan kund) dressing", "Cushioned seating for bride and groom"],
+        "idealFor": "Hindu weddings, Brahman vidhi ceremonies, destination weddings"
+      },
+      "haldi": {
+        "name": "Haldi Decoration",
+        "description": "Vibrant yellow marigold setups for Haldi ceremonies.",
+        "details": "Haldi is a joyful, intimate family ceremony and we make it visually vibrant. Our signature Haldi setups feature cascading marigold strings, floral swings, turmeric-toned backdrops, and matching floral jewellery props — perfect for stunning photographs.",
+        "includes": ["Marigold string backdrop and curtains", "Floral swing (jhula) for the couple", "Yellow and orange floral props", "Petal-decorated seating", "Floral jewellery props for photos", "Entrance toran in marigold"],
+        "idealFor": "Pre-wedding Haldi functions, family home ceremonies"
+      },
+      "mehendi": {
+        "name": "Mehendi Decoration",
+        "description": "Colorful floral and light decor for Mehendi nights.",
+        "details": "Mehendi nights call for colour, warmth, and festive energy. We create vibrant setups with bright florals, fairy lights, floor seating with cushion arrangements, and eye-catching photo-worthy backdrops that set the mood for a night full of fun.",
+        "includes": ["Colourful floral backdrop wall", "Fairy light canopy over seating", "Floor cushion seating arrangement", "Floral canopy or tent dressing", "Rangoli-inspired floral floor art", "Prop corners for photos"],
+        "idealFor": "Pre-wedding Mehendi nights, sangeet functions"
+      },
+      "engagement": {
+        "name": "Engagement Decoration",
+        "description": "Elegant stage decoration for ring ceremonies.",
+        "details": "An engagement is where your love story becomes official. Our engagement setups feature elegant floral stages, fresh flower garlands for the couple, petal-strewn pathways, and beautiful ring exchange areas — all designed to create an atmosphere of romance and elegance.",
+        "includes": ["Couple's stage with floral backdrop", "Fresh flower garlands for bride and groom", "Ring exchange table decoration", "Petal pathway for couple's entry", "Floral arch for couple photos", "Guest seating accent florals"],
+        "idealFor": "Ring ceremony, sagai, roka functions"
+      },
+      "reception": {
+        "name": "Reception Decoration",
+        "description": "Grand floral stages for wedding receptions.",
+        "details": "The reception is your grandest public celebration. We design spectacular reception stages with flower walls, LED-lit floral panels, draped ceilings, and luxurious table arrangements that create the perfect backdrop for photographs and memories.",
+        "includes": ["Grand flower wall backdrop stage", "LED-lit floral panels (optional)", "Bride and groom throne seating", "Guest dining table centrepieces", "Draping for ceiling and pillars", "Entrance floral archway"],
+        "idealFor": "Hotel banquets, lawn receptions, restaurant celebrations"
+      },
+      "birthday": {
+        "name": "Birthday Decoration",
+        "description": "Creative balloon and flower setups for birthdays.",
+        "details": "Whether it's a 1st birthday or a 50th, we tailor the decoration to the personality and theme. We combine balloon artistry with fresh florals to create birthday setups that are fun, photogenic, and memorable — from simple home parties to grand hall celebrations.",
+        "includes": ["Theme-based balloon arch and pillars", "Floral photo backdrop", "Birthday cake table decoration", "Balloon ceiling cluster", "Welcome board with name and age", "Table centrepieces"],
+        "idealFor": "Kids' birthdays, milestone birthdays, surprise parties"
+      },
+      "baby_shower": {
+        "name": "Baby Shower Decoration",
+        "description": "Pastel flowers and joyful themes for baby showers.",
+        "details": "Celebrate the newest arrival with soft pastel florals, whimsical balloon clouds, and a beautiful mom-to-be chair setup. Our baby shower decorations are gentle, elegant, and create a warm, joyful atmosphere for family and friends to share.",
+        "includes": ["Pastel floral backdrop", "Mom-to-be throne / special chair", "Balloon cloud and garland ceiling", "Baby-themed centrepieces", "Welcome board", "Gift table decoration"],
+        "idealFor": "Godh bharai, baby shower parties, naamkaran pre-celebrations"
+      },
+      "anniversary": {
+        "name": "Anniversary Decoration",
+        "description": "Romantic floral arrangements for anniversaries.",
+        "details": "Surprise your partner or celebrate your milestone with a deeply romantic floral setup. We specialise in intimate anniversary decorations at home or at a venue — rose petal trails, candlelight setups, heart-shaped floral walls, and personalised touches that make the evening feel truly special.",
+        "includes": ["Rose petal trail and floor art", "Heart-shaped floral backdrop", "Candle and fairy light arrangement", "Balloon heart arch", "Personalised name/year signage", "Couple's table decoration"],
+        "idealFor": "25th / 50th anniversaries, romantic surprises, home celebrations"
+      },
+      "naming": {
+        "name": "Naming Ceremony",
+        "description": "Traditional floral decor for Naamkaran ceremonies.",
+        "details": "Naamkaran is one of the most auspicious milestones in a child's life. We create a warm and traditional atmosphere using fresh flowers, marigold torans, flower swings (palna decoration), and a beautifully adorned ritual area that honours the occasion with grace.",
+        "includes": ["Baby's palna (cradle) floral decoration", "Ritual area dressing with flowers", "Marigold toran at entrance", "Flower garlands for family members", "Centrepieces for dining tables", "Welcome board with baby's name"],
+        "idealFor": "Naamkaran / barsa / naming ceremony"
+      },
+      "housewarming": {
+        "name": "Housewarming Decoration",
+        "description": "Auspicious entrance decor for Griha Pravesh.",
+        "details": "Griha Pravesh marks a new beginning. We adorn your new home with auspicious floral decorations — marigold and mango leaf torans, rangoli accents, flower-decorated pooja areas, and a welcoming entrance that invites prosperity and positive energy into your home.",
+        "includes": ["Marigold and mango leaf toran at door", "Pooja area floral decoration", "Entrance rangoli with flower petals", "Flower garlands for guests", "Living room floral arrangement", "Kalash and ritual area decoration"],
+        "idealFor": "Griha Pravesh, flat possession, new office inauguration"
+      },
+      "corporate": {
+        "name": "Corporate Events",
+        "description": "Professional floral styling for corporate functions.",
+        "details": "Make your corporate event stand out with sophisticated, brand-aligned floral décor. We work with your company colours and theme to deliver polished arrangements for conferences, product launches, award nights, and office inaugurations — tasteful, professional, and impactful.",
+        "includes": ["Stage / dais floral decoration", "Welcome desk and foyer florals", "Conference table centrepieces", "Award / recognition stage setup", "Branding-aligned flower arrangements", "Inauguration ribbon and garland"],
+        "idealFor": "Product launches, annual days, conferences, award nights, inaugurations"
+      },
+      "stage": {
+        "name": "Stage Decoration",
+        "description": "Elaborate floral backdrop walls for stages.",
+        "details": "Our stage decoration service creates spectacular visual centrepieces for any event. From full-coverage flower walls to mixed floral and LED panel backdrops, our stages are designed to photograph beautifully and command attention in any venue.",
+        "includes": ["Floor-to-ceiling flower wall backdrop", "Custom LED and floral panel (optional)", "Stage skirt floral dressing", "Podium and mic stand decoration", "Themed colour palette arrangement", "Side-panel floral accents"],
+        "idealFor": "Award nights, cultural events, school functions, religious programs"
+      },
+      "car": {
+        "name": "Car Decoration",
+        "description": "Elegant flower arrangements for wedding cars.",
+        "details": "The wedding car is the couple's royal chariot. We decorate it inside and out with fresh roses, orchids, and ribbon work — creating a fairytale look that makes the couple's arrival and departure truly cinematic.",
+        "includes": ["Hood and roof floral arrangement", "Door panel flower strings", "Interior rose petal floor", "Ribbon and bow decoration", "\"Just Married\" signage (optional)", "Fresh flowers guaranteed on the day"],
+        "idealFor": "Bridal car, groom's car, baraat vehicles"
+      },
+      "temple": {
+        "name": "Temple Decoration",
+        "description": "Devotional floral setups for temple events.",
+        "details": "We bring devotion and beauty together in our temple decoration service. Using traditional flowers like marigold, mogra, lotus, and roses, we create sacred floral environments for pujas, festivals, and special religious events — honouring the divine with reverence.",
+        "includes": ["Deity decoration with flower garlands", "Temple entrance toran", "Puja mandap floral dressing", "Flower petal rangoli", "Hanging flower chandeliers", "Festival-specific floral themes"],
+        "idealFor": "Satyanarayan puja, Ganpati festival, temple anniversary, Diwali pooja"
+      },
+      "home": {
+        "name": "Home Decoration",
+        "description": "Fresh floral interiors for festive occasions.",
+        "details": "Transform your home into a festive haven with our home decoration service. We bring fresh blooms into your living spaces — from entrance torans and pooja rooms to living area arrangements and dining table centrepieces — filling your home with fragrance and colour.",
+        "includes": ["Entrance floral toran", "Pooja room decoration", "Living room centrepiece arrangements", "Dining table floral setting", "Staircase garland dressing", "Festival-specific themed flowers"],
+        "idealFor": "Diwali, Navratri, Ganesh Chaturthi, Dussehra, family functions at home"
+      },
+      "room": {
+        "name": "Room Decoration",
+        "description": "Romantic room setups with rose petals.",
+        "details": "Create an unforgettable, intimate experience with our room decoration service. Perfect for wedding nights, anniversaries, or a surprise for your partner — we arrange rose petal trails, candles, fairy lights, and flower installations that set the scene for romance.",
+        "includes": ["Rose petal trail on bed and floor", "Candle and fairy light setup", "Floral wall or heart backdrop", "Balloon cluster or arch", "Flower vase arrangements", "Fragrant flowers like roses and mogra"],
+        "idealFor": "Wedding night / suhaag raat, anniversary surprise, Valentine's Day"
+      },
+      "welcome": {
+        "name": "Welcome Decoration",
+        "description": "Inviting floral archways for event entrances.",
+        "details": "First impressions matter. Our welcome and entrance decorations set the tone for the entire event — beautiful floral archways, petal-strewn welcome paths, floral name boards, and ornate gate decorations that greet every guest with elegance.",
+        "includes": ["Grand floral archway at entrance", "Welcome name board with flowers", "Petal pathway for guests", "Flower toran and bunting", "Floral pillars flanking entrance", "Balloon and flower welcome cluster"],
+        "idealFor": "Any event entrance — weddings, parties, corporate events, pujas"
+      },
+      "bouquet": {
+        "name": "Flower Bouquet",
+        "description": "Premium hand-tied bouquets for gifting.",
+        "details": "Our hand-tied bouquets are crafted with the freshest seasonal and imported flowers. Whether you need a bridal bouquet, a gift for a loved one, or a corporate gifting arrangement, we design each bouquet with care, wrapping it beautifully for presentation.",
+        "includes": ["Fresh seasonal flowers", "Imported blooms (roses, lilies, orchids)", "Custom colour and theme", "Premium wrapping and ribbon", "Message card included", "Same-day delivery available in Pune"],
+        "idealFor": "Bridal bouquet, gifting, congratulations, condolences, corporate gifting"
+      },
+      "balloon": {
+        "name": "Balloon Decoration",
+        "description": "Colorful balloon artistry for parties.",
+        "details": "Balloons add instant festivity and colour to any celebration. Our balloon decoration service goes beyond simple bunches — we create sculpted arches, organic balloon walls, ceiling clusters, custom letter and number balloons, and themed balloon columns for all kinds of events.",
+        "includes": ["Balloon arch (organic or classic)", "Balloon wall / backdrop", "Ceiling cluster arrangement", "Custom letter or number balloons", "Themed balloon columns", "Balloon bouquet centrepieces"],
+        "idealFor": "Birthdays, baby showers, gender reveals, farewell parties, festive events"
+      },
+      "torans": {
+        "name": "Torans",
+        "description": "Traditional floral door hangings.",
+        "details": "Torans are the auspicious door hangings that welcome prosperity and blessings into any space. We make fresh marigold and mango leaf torans for festivals, weddings, and ceremonies — as well as dried flower and artificial torans for long-lasting decorations.",
+        "includes": ["Fresh marigold and mango leaf torans", "Mogra string torans", "Custom length and colour combinations", "Artificial / dried flower torans (long-lasting)", "Festive themed torans (Diwali, Dussehra)", "Bulk torans for venue gates"],
+        "idealFor": "Weddings, Diwali, Navratri, Ganesh Chaturthi, housewarming, any festival"
+      },
+      "funeral": {
+        "name": "Funeral Decoration",
+        "description": "Respectful white floral tributes and setups.",
+        "details": "We handle funeral and antim sanskar floral arrangements with the deepest sensitivity and respect. Our team provides timely, dignified white floral setups — from bier decoration to portrait garlands and full venue dressing — allowing families to focus on their loved ones.",
+        "includes": ["Phool ki chaadar (floral shroud)", "Portrait garland for the departed", "White flower bier / arthi decoration", "Funeral venue white floral dressing", "Marigold and tuberose arrangements", "Respectful and timely delivery"],
+        "idealFor": "Antim sanskar, shraddhanjali, condolence meetings"
+      }
     }
   },
   "gallery": {

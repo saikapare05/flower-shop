@@ -10,6 +10,7 @@ interface LanguageContextType {
   lang: Language;
   setLang: (lang: Language) => void;
   t: (key: string) => string;
+  tArray: (key: string) => string[];
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -31,22 +32,25 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('sai-lang', newLang);
   };
 
-  const t = (path: string): string => {
+  const resolve = (path: string, language: Language): unknown => {
     const keys = path.split('.');
-    let current: any = translations[lang];
+    let current: any = translations[language];
     for (const key of keys) {
-      if (current[key] === undefined) {
-        // Fallback to English if key missing
-        let fallback: any = translations['en'];
-        for (const fbKey of keys) {
-          if (fallback[fbKey] === undefined) return path;
-          fallback = fallback[fbKey];
-        }
-        return fallback;
-      }
+      if (current == null || current[key] === undefined) return undefined;
       current = current[key];
     }
-    return current as string;
+    return current;
+  };
+
+  const t = (path: string): string => {
+    const value = resolve(path, lang) ?? resolve(path, 'en') ?? path;
+    return Array.isArray(value) ? value.join(', ') : String(value);
+  };
+
+  const tArray = (path: string): string[] => {
+    const value = resolve(path, lang) ?? resolve(path, 'en');
+    if (Array.isArray(value)) return value as string[];
+    return [];
   };
 
   useEffect(() => {
@@ -59,7 +63,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, [lang]);
 
   return (
-    <LanguageContext.Provider value={{ lang, setLang, t }}>
+    <LanguageContext.Provider value={{ lang, setLang, t, tArray }}>
       {children}
     </LanguageContext.Provider>
   );
