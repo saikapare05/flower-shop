@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { toast } from 'sonner';
 import { useLanguage } from '@/lib/i18n';
-import { LogOut, Image as ImageIcon, MessageSquare, HelpCircle, Upload, Trash2 } from 'lucide-react';
+import { LogOut, Image as ImageIcon, MessageSquare, HelpCircle, Upload, Trash2, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
 const categoriesList = [
@@ -30,6 +30,7 @@ export default function Admin() {
   const [uploadCategory, setUploadCategory] = useState(categoriesList[0]);
   const [uploadFile, setUploadFile] = useState<File | null>(null);
   const [uploadProgress, setUploadProgress] = useState(0);
+  const [uploadStatus, setUploadStatus] = useState<{ type: 'idle' | 'uploading' | 'success' | 'error'; message: string }>({ type: 'idle', message: '' });
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -55,39 +56,73 @@ export default function Admin() {
 
   const handleUpload = async () => {
     if (!uploadFile) {
-      toast.error("Please select a file");
+      setUploadStatus({ type: 'error', message: 'Please select a file first.' });
       return;
     }
-    
+
+    setUploadStatus({ type: 'uploading', message: 'Uploading…' });
+    setUploadProgress(0);
+
     try {
       const storageRef = ref(storage, `gallery/${uploadCategory}/${Date.now()}_${uploadFile.name}`);
       const uploadTask = uploadBytesResumable(storageRef, uploadFile);
 
-      uploadTask.on('state_changed', 
+      uploadTask.on(
+        'state_changed',
         (snapshot) => {
           const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           setUploadProgress(progress);
-        }, 
+          setUploadStatus({ type: 'uploading', message: `Uploading… ${Math.round(progress)}%` });
+        },
         (error) => {
-          toast.error("Upload failed: " + error.message);
+          console.error('Storage upload error:', error.code, error.message);
+          const storageErrors: Record<string, string> = {
+            'storage/unauthorized': 'Permission denied. Make sure Firebase Storage rules allow authenticated uploads.',
+            'storage/canceled': 'Upload was cancelled.',
+            'storage/unknown': 'An unknown error occurred. Check that Firebase Storage is enabled in your Firebase Console.',
+            'storage/object-not-found': 'Storage bucket not found. Enable Firebase Storage in the Firebase Console.',
+            'storage/bucket-not-found': 'Storage bucket not found. Enable Firebase Storage in the Firebase Console.',
+            'storage/quota-exceeded': 'Storage quota exceeded.',
+            'storage/unauthenticated': 'You must be logged in to upload.',
+            'storage/retry-limit-exceeded': 'Upload timed out. Check your connection.',
+            'storage/invalid-checksum': 'File corrupted during upload. Please try again.',
+            'storage/cannot-slice-blob': 'File changed during upload. Please try again.',
+            'storage/server-file-wrong-size': 'File size mismatch. Please try again.',
+          };
+          const msg = storageErrors[error.code] ?? `Upload failed: ${error.message} (${error.code})`;
+          setUploadStatus({ type: 'error', message: msg });
+          toast.error(msg);
           setUploadProgress(0);
-        }, 
+        },
         async () => {
-          const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
-          await addDoc(collection(db, 'gallery'), {
-            category: uploadCategory,
-            url: downloadURL,
-            title: uploadFile.name,
-            createdAt: serverTimestamp()
-          });
-          toast.success("Image uploaded successfully");
-          setUploadFile(null);
-          setUploadProgress(0);
-          fetchGallery();
+          try {
+            const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
+            await addDoc(collection(db, 'gallery'), {
+              category: uploadCategory,
+              url: downloadURL,
+              title: uploadFile.name,
+              createdAt: serverTimestamp(),
+            });
+            setUploadStatus({ type: 'success', message: `"${uploadFile.name}" uploaded successfully!` });
+            toast.success('Image uploaded successfully');
+            setUploadFile(null);
+            setUploadProgress(0);
+            fetchGallery();
+            // Reset status after 4 seconds
+            setTimeout(() => setUploadStatus({ type: 'idle', message: '' }), 4000);
+          } catch (firestoreErr: any) {
+            const msg = `Uploaded to Storage but failed to save to database: ${firestoreErr.message}`;
+            setUploadStatus({ type: 'error', message: msg });
+            toast.error(msg);
+          }
         }
       );
     } catch (e: any) {
-      toast.error("Error: " + e.message);
+      console.error('Upload error:', e);
+      const msg = `Error: ${e.message}`;
+      setUploadStatus({ type: 'error', message: msg });
+      toast.error(msg);
+      setUploadProgress(0);
     }
   };
 
@@ -195,19 +230,36 @@ export default function Admin() {
                     onChange={(e) => setUploadFile(e.target.files?.[0] || null)}
                   />
                 </div>
-                <Button 
+                <Button
                   onClick={handleUpload}
-                  disabled={!uploadFile || uploadProgress > 0}
-                  className="bg-primary text-white shrink-0"
+                  disabled={uploadStatus.type === 'uploading'}
+                  className="bg-primary text-white shrink-0 min-w-[110px]"
                 >
-                  <Upload className="w-4 h-4 mr-2" />
-                  Upload
+                  {uploadStatus.type === 'uploading' ? (
+                    <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Uploading</>
+                  ) : (
+                    <><Upload className="w-4 h-4 mr-2" />Upload</>
+                  )}
                 </Button>
               </div>
-              {uploadProgress > 0 && (
+
+              {/* Inline status */}
+              {uploadStatus.type === 'uploading' && uploadProgress > 0 && (
                 <div className="mt-4">
                   <Progress value={uploadProgress} className="h-2" />
                   <p className="text-xs text-right mt-1 text-muted-foreground">{Math.round(uploadProgress)}%</p>
+                </div>
+              )}
+              {uploadStatus.type === 'success' && (
+                <div className="mt-4 flex items-center gap-2 text-green-700 bg-green-50 border border-green-200 rounded-xl px-4 py-3 text-sm">
+                  <CheckCircle2 className="w-4 h-4 shrink-0" />
+                  {uploadStatus.message}
+                </div>
+              )}
+              {uploadStatus.type === 'error' && (
+                <div className="mt-4 flex items-start gap-2 text-red-700 bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm">
+                  <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                  <span>{uploadStatus.message}</span>
                 </div>
               )}
             </div>
