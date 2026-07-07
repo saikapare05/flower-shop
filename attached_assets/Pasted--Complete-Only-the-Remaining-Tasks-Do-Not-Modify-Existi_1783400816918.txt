@@ -1,0 +1,141 @@
+# Complete Only the Remaining Tasks (Do Not Modify Existing Working Features)
+
+Continue working on the existing Flower Shop website. Do **NOT** redesign or change any completed sections. Only complete the remaining unfinished tasks and fix any incomplete functionality.
+
+## 1. Complete All Remaining Pending Tasks
+
+Carefully inspect the entire project and complete every unfinished feature.
+
+* Fix any incomplete functionality.
+* Fix broken buttons and links.
+* Complete any pending forms.
+* Remove placeholder content.
+* Resolve any console errors.
+* Fix UI inconsistencies.
+* Ensure every page works correctly.
+* Do not remove or redesign existing working features.
+
+---
+
+# 2. Gallery Admin Upload System
+
+Complete the Gallery Management feature for the Admin Panel.
+
+The admin should be able to:
+
+* Upload new gallery images.
+* Upload multiple images at once.
+* Edit image title.
+* Edit image description.
+* Assign image category.
+* Delete images.
+* Replace existing images.
+* Reorder gallery images.
+* Mark images as featured (optional).
+* Store uploaded images correctly in the database/storage.
+* Display newly uploaded images instantly on the Gallery page without breaking the layout.
+
+Supported image formats:
+
+* JPG
+* JPEG
+* PNG
+* WEBP
+
+Validate uploads by checking:
+
+* File type
+* Maximum file size
+* Upload errors
+
+Show proper success and error messages after upload.
+
+---
+
+# 3. Gallery Image Viewer
+
+When a visitor clicks any gallery image, open a modern fullscreen image viewer (lightbox).
+
+The viewer should include:
+
+* Previous Image
+* Next Image
+* Close Button
+* Smooth opening/closing animation
+* Keyboard navigation (Arrow Keys + ESC)
+* Mobile swipe support
+
+---
+
+# 4. Download Image Feature
+
+Inside the image viewer, add a **Download** button.
+
+Requirements:
+
+* Download the original image.
+* Preserve image quality.
+* Preserve the filename.
+* Work on desktop and mobile devices.
+* Show a loading indicator while downloading.
+* Handle download errors gracefully.
+
+---
+
+# 5. Share Image Feature
+
+Inside the image viewer, add a **Share** button.
+
+Requirements:
+
+* Use the Web Share API on supported browsers.
+* If Web Share API is unavailable, automatically show a fallback share dialog.
+
+Provide sharing options such as:
+
+* WhatsApp
+* Facebook
+* Telegram
+* Email
+* Copy Image Link
+
+When "Copy Link" is selected:
+
+* Copy the image URL to the clipboard.
+* Show a success toast message such as:
+  **"Image link copied successfully."**
+
+The Share feature should work on both desktop and mobile.
+
+---
+
+# 6. Gallery Performance
+
+Ensure the gallery remains fast even with many uploaded images.
+
+Implement:
+
+* Lazy loading
+* Image optimization
+* Responsive image sizing
+* Smooth loading animations
+* Proper error handling for missing images
+
+---
+
+# Final Verification
+
+Before finishing, verify that:
+
+* Admin can upload images successfully.
+* Uploaded images appear immediately in the gallery.
+* Admin can edit and delete images.
+* Clicking any image opens the viewer correctly.
+* Every image can be downloaded successfully.
+* Every image can be shared successfully.
+* Copy Link works correctly.
+* The gallery is fully responsive.
+* No console errors remain.
+* No existing functionality is broken.
+
+Only implement these remaining tasks. Do not redesign or modify any completed sections unless required to make these features work correctly.
