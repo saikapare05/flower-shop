@@ -1,11 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/lib/i18n';
 import { Plus, Minus } from 'lucide-react';
-import { collection, getDocs } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
 
-const hardcodedFaqs = [
+const faqKeys = [
   { id: '1', qKey: 'q1', aKey: 'a1' },
   { id: '2', qKey: 'q2', aKey: 'a2' },
   { id: '3', qKey: 'q3', aKey: 'a3' },
@@ -18,17 +16,11 @@ const hardcodedFaqs = [
 
 export function FAQ() {
   const { t } = useLanguage();
-  const [faqs, setFaqs] = useState(hardcodedFaqs);
   const [openId, setOpenId] = useState<string | null>(null);
-
-  // In a real app we'd load these from Firestore and fallback, 
-  // but for translations it's tricky if data is mixed. 
-  // We'll stick to translations for base FAQs, and allow dynamic ones if loaded.
 
   return (
     <section id="faq" className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="h-px w-12 bg-secondary" />
@@ -41,10 +33,10 @@ export function FAQ() {
         </div>
 
         <div className="max-w-3xl mx-auto space-y-4">
-          {faqs.map((faq) => {
+          {faqKeys.map((faq) => {
             const isOpen = openId === faq.id;
             return (
-              <motion.div 
+              <motion.div
                 key={faq.id}
                 initial={false}
                 className={`border rounded-xl overflow-hidden transition-colors ${isOpen ? 'bg-white border-primary shadow-md' : 'bg-white border-border hover:border-primary/50'}`}
@@ -60,7 +52,7 @@ export function FAQ() {
                     {isOpen ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
                   </div>
                 </button>
-                
+
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
@@ -79,7 +71,6 @@ export function FAQ() {
             );
           })}
         </div>
-
       </div>
     </section>
   );

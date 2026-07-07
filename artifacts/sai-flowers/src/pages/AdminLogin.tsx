@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import { auth } from '@/lib/firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useLocation, Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -8,9 +6,9 @@ import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 import { Flower2, Lock } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n';
+import { login } from '@/lib/api';
 
 export default function AdminLogin() {
-  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [, setLocation] = useLocation();
@@ -20,22 +18,18 @@ export default function AdminLogin() {
     e.preventDefault();
     setLoading(true);
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      toast.success("Login successful");
+      await login(password);
+      toast.success('Login successful');
       setLocation('/admin');
-    } catch (error: any) {
-      console.error('Login error:', error.code, error.message);
-      const messages: Record<string, string> = {
-        'auth/invalid-credential': 'Wrong email or password.',
-        'auth/user-not-found': 'No account found with this email.',
-        'auth/wrong-password': 'Incorrect password.',
-        'auth/invalid-email': 'Invalid email address.',
-        'auth/too-many-requests': 'Too many attempts. Try again later.',
-        'auth/network-request-failed': 'Network error. Check your connection.',
-        'auth/operation-not-allowed': 'Email/Password sign-in is not enabled in Firebase Console. Go to Authentication → Sign-in method → Email/Password and enable it.',
-        'auth/unauthorized-domain': `This domain is not authorised in Firebase. Go to Authentication → Settings → Authorised domains and add: ${window.location.hostname}`,
-      };
-      toast.error(messages[error.code] || `Error: ${error.code || error.message}`);
+    } catch (err: any) {
+      console.error('[AdminLogin] error:', err.message);
+      // Map common server errors to user-friendly messages
+      const msg = err.message?.includes('not set')
+        ? 'Server configuration error — ADMIN_PASSWORD secret not set in Replit.'
+        : err.message?.includes('Incorrect')
+          ? 'Incorrect password. Please try again.'
+          : err.message ?? 'Login failed.';
+      toast.error(msg);
     } finally {
       setLoading(false);
     }
@@ -59,33 +53,24 @@ export default function AdminLogin() {
 
         <form onSubmit={handleLogin} className="space-y-6">
           <div className="space-y-2">
-            <Label htmlFor="email">{t('admin.email')}</Label>
-            <Input 
-              id="email" 
-              type="email" 
-              required 
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="bg-muted/50"
-            />
-          </div>
-          <div className="space-y-2">
             <Label htmlFor="password">{t('admin.password')}</Label>
-            <Input 
-              id="password" 
-              type="password" 
-              required 
+            <Input
+              id="password"
+              type="password"
+              required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="bg-muted/50"
+              placeholder="Enter admin password"
+              autoComplete="current-password"
             />
           </div>
-          <Button 
-            type="submit" 
+          <Button
+            type="submit"
             className="w-full bg-primary hover:bg-primary/90 text-white py-6"
             disabled={loading}
           >
-            {loading ? '...' : t('admin.signIn')}
+            {loading ? 'Signing in…' : t('admin.signIn')}
           </Button>
         </form>
 
